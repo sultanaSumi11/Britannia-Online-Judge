@@ -13,6 +13,6 @@ At Last Replace Path in putenv() function by your path (c.php, cpp.php, cpp11.ph
 
 
 Database Setup
-Create vlabreg database and import from db folder.
+Create vlabreg database and import from db.text file.
 
 
