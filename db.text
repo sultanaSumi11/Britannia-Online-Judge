@@ -1,0 +1,224 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 13, 2022 at 05:24 PM
+-- Server version: 10.1.34-MariaDB
+-- PHP Version: 7.2.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `vlabreg`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `archieve`
+--
+
+CREATE TABLE `archieve` (
+  `id` int(11) NOT NULL,
+  `pbname` varchar(100) DEFAULT NULL,
+  `pbdes` longtext,
+  `tc` mediumtext,
+  `output` mediumtext,
+  `uoutput` mediumtext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `archieve`
+--
+
+INSERT INTO `archieve` (`id`, `pbname`, `pbdes`, `tc`, `output`, `uoutput`) VALUES
+(59, 'Sum of Two Numbers', 'Given two number. Show their sum.\r\n\r\nInput\r\nTwo number a and b.\r\n\r\nOutput\r\nSum of a and b.\r\n\r\nSample Input\r\n2\r\n77 9\r\n23 77\r\n\r\nOutput for Sample Input\r\n\r\nCase 1: 86\r\nCase 2: 100', '6\r\n77 9\r\n23 77\r\n1 4\r\n2 5\r\n8 10\r\n12 5\r\n', 'Case 1: 86\r\nCase 2: 100\r\nCase 3: 5\r\nCase 4: 7\r\nCase 5: 18\r\nCase 6: 17\r\n', 'Case 1: 86\nCase 2: 100\nCase 3: 5\nCase 4: 7\nCase 5: 18\nCase 6: 17\n'),
+(68, 'XOR operation', 'description.txt', 'tc.txt', 'output.txt', ''),
+(123, 'Subtraction ', 'Given two numbers a and b. Subtract b from a.\r\n\r\nInput\r\nGiven two number a and b.\r\n\r\nOutput\r\nFind  a-b.\r\n\r\n \r\n \r\nSample Input\r\n2\r\n4 5\r\n8 2\r\n\r\nSample Output\r\n-1\r\n6', '5\r\n5 1\r\n10 12\r\n13 3\r\n19 2\r\n23 7\r\n', '4\r\n-2\r\n10\r\n17\r\n16\r\n', '4\n-2\n10\n17\n16\n'),
+(233, 'XOR operation', 'Given two numbers. Find their XOR operation.\r\n\r\nInput\r\nGiven two number a and b.\r\n\r\nOutput\r\nXOR of them.\r\n\r\n \r\n \r\nSample Input\r\n2\r\n4 5\r\n1 2\r\n\r\nSample Output\r\n1\r\n3\r\n', '5\r\n1 2\r\n4 5\r\n4 4\r\n5 5\r\n6 6\r\n', '3\r\n1\r\n0\r\n0\r\n0\r\n', '3\n1\n0\n0\n0\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auser`
+--
+
+CREATE TABLE `auser` (
+  `name` varchar(40) NOT NULL DEFAULT '',
+  `pass` varchar(40) DEFAULT NULL,
+  `status` varchar(50) DEFAULT 'student',
+  `email` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `auser`
+--
+
+INSERT INTO `auser` (`name`, `pass`, `status`, `email`) VALUES
+('sumi', 'a52eb3f5da9d81b0d010bc83ad95c9dc', 'user', 'sumi@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `code`
+--
+
+CREATE TABLE `code` (
+  `submit_name` varchar(50) DEFAULT NULL,
+  `source_code` longtext,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `code`
+--
+
+INSERT INTO `code` (`submit_name`, `source_code`, `id`) VALUES
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<tc<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}', 198),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<tc<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}', 199),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<tc<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}\r\n', 200),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<tc<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}\r\n', 201),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}', 202),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b<<\"\n\";\r\n   }\r\n\r\n\r\n}', 203),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b<<endl;\r\n   }\r\n\r\n\r\n}\r\n', 204),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b<<endl;\r\n   }\r\n\r\n\r\n}\r\n', 205),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b+1<<endl;\r\n   }\r\n\r\n\r\n}\r\n', 206),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<\"Case \"<<i<<\": \"<<a+b<<endl;\r\n   }\r\n\r\n\r\n}\r\n', 207),
+('', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<(a^b)<<endl;\r\n   }\r\n\r\n\r\n}\r\n\r\n', 208),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<(a^b)<<endl;\r\n   }\r\n\r\n\r\n}\r\n\r\n', 209),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<(a-b)<<endl;\r\n   }\r\n\r\n\r\n}\r\n\r\n', 210),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<(a^b)<<endl;\r\n   }\r\n\r\n\r\n}\r\n\r\n', 211),
+('sumi', '#include<bits/stdc++.h>\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n   int tc, a, b;\r\n   cin>>tc;\r\n   for(int i=1 ; i<=tc ; i++){\r\n       cin>>a>>b;\r\n       cout<<(a-b)<<endl;\r\n   }\r\n\r\n\r\n}\r\n\r\n', 212);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `status`
+--
+
+CREATE TABLE `status` (
+  `username` varchar(50) DEFAULT NULL,
+  `result` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submission`
+--
+
+CREATE TABLE `submission` (
+  `sid` int(11) NOT NULL,
+  `sname` varchar(50) DEFAULT NULL,
+  `verdict` varchar(50) DEFAULT NULL,
+  `pbname` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `submission`
+--
+
+INSERT INTO `submission` (`sid`, `sname`, `verdict`, `pbname`) VALUES
+(198, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(199, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(200, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(201, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(202, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(203, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(204, 'sumi', 'Wrong Answer', 'Sum of Two Numbers'),
+(207, 'sumi', 'Accepted', 'Sum of Two Numbers'),
+(209, 'sumi', 'Accepted', 'XOR operation'),
+(210, 'sumi', 'Accepted', 'Subtraction '),
+(211, 'sumi', 'Wrong Answer', 'Subtraction '),
+(212, 'sumi', 'Accepted', 'Subtraction ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `name` varchar(40) NOT NULL DEFAULT '',
+  `pass` varchar(40) DEFAULT NULL,
+  `status` varchar(50) DEFAULT 'student',
+  `email` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`name`, `pass`, `status`, `email`) VALUES
+('sumi', 'a52eb3f5da9d81b0d010bc83ad95c9dc', 'user', 'sumi@gmail.com');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `archieve`
+--
+ALTER TABLE `archieve`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `auser`
+--
+ALTER TABLE `auser`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indexes for table `code`
+--
+ALTER TABLE `code`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `submission`
+--
+ALTER TABLE `submission`
+  ADD PRIMARY KEY (`sid`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `archieve`
+--
+ALTER TABLE `archieve`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
+
+--
+-- AUTO_INCREMENT for table `code`
+--
+ALTER TABLE `code`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+
+--
+-- AUTO_INCREMENT for table `submission`
+--
+ALTER TABLE `submission`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
